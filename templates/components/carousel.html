@@ -1,4 +1,4 @@
-<section class="heroCarousel"
+<!-- <section class="heroCarousel"
     data-slick='{
         "mobileFirst": true,
         "slidesToShow": 1,
@@ -6,12 +6,16 @@
         "autoplay": true,
         "autoplaySpeed": {{carousel.swap_frequency}},
         "lazyLoad": "anticipated"
-    }'>
+    }'> -->
+<section class="heroCarousel">
     {{#each carousel.slides}}
     <a href="{{url}}">
-        <div class="heroCarousel-slide {{#if ../theme_settings.homepage_stretch_carousel_images}}stretch{{/if}} {{#if @first}}heroCarousel-slide--first{{/if}}">
+        <!-- <div class="heroCarousel-slide {{#if ../theme_settings.homepage_stretch_carousel_images}}stretch{{/if}} {{#if @first}}heroCarousel-slide--first{{/if}}"> -->
+        <div class="heroCarousel-slide1 {{#if ../theme_settings.homepage_stretch_carousel_images}}stretch{{/if}} {{#if @first}}heroCarousel-slide--first{{/if}}">
             <div class="heroCarousel-image-wrapper" {{#if image_height}}{{#if image_width}}style="height: {{multiply (divide image_height image_width) 100}}vw"{{/if}}{{/if}}>
-                <img class="heroCarousel-image" data-lazy="{{image}}" alt="{{alt_text}}" title="{{alt_text}}"
+                <!-- <img class="heroCarousel-image" data-lazy="{{image}}" alt="{{alt_text}}" title="{{alt_text}}"
+                {{#if image_width}}width="{{image_width}}"{{/if}} {{#if image_height}}height="{{image_height}}"{{/if}} /> -->
+                <img class="heroCarousel-image" style="width: 100%;" src="{{image}}" data-lazy="{{image}}" alt="{{alt_text}}" title="{{alt_text}}"
                 {{#if image_width}}width="{{image_width}}"{{/if}} {{#if image_height}}height="{{image_height}}"{{/if}} />
             </div>
             {{#if heading}}

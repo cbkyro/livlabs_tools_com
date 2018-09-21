@@ -84,7 +84,9 @@
     }
 
     .heroCarousel-image-wrapper {
+        margin-bottom: 1%; /* Adds spacing between banners since all are showing on the homepage at once */
         @include breakpoint("medium") {
+            margin-bottom: 1%;
             // max-height: remCalc(600px); //sets definitive height
         }
     }
@@ -104,6 +106,10 @@
             opacity: 0;
         }
     }
+}
+/* Adds spacing between banners since all are showing on the homepage at once */
+.heroCarousel-image-wrapper {
+    margin-bottom: 0.5%;
 }
 
 .heroCarousel-content {

@@ -97,7 +97,8 @@
 }
 
 .header-logo--left {
-    text-align: left;
+    // text-align: left;
+    text-align: center;
 
     @include breakpoint("medium") {
         margin-left: remCalc(40px);

@@ -37,7 +37,7 @@
         {{/if}}
 
         {{> components/common/header }}
-        {{> components/common/body }}
+        {{> components/common/body }}a
         {{> components/common/footer }}
 
         <script>window.__webpack_public_path__ = "{{cdn 'assets/dist/'}}";</script>
@@ -46,6 +46,37 @@
         <script>
             // Exported in app.js
             window.stencilBootstrap("{{page_type}}", {{jsContext}}).load();
+        </script>
+
+        <!-- Modal -->
+      <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title heroCarousel-description" id="exampleModalLongTitle">You are now leaving the Tools store</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <p>Redirecting to https://www.livlabsswag.com</p>
+            </div>
+            <div class="modal-footer">
+              <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button> -->
+              <a href="http://livlabstools.com"><span class="heroCarousel-action button button--primary button--large">Shop Tools <img src="https://cdn7.bigcommerce.com/s-sox5h1cuho/product_images/uploaded_images/button-icon.png?t=1537856118" alt=""></span></a>
+              <!-- <a href="http://livlabstools.com" class="btn btn-primary">Take me there!</a> -->
+            </div>
+          </div>
+        </div>
+      </div>
+        {{{stylesheet '/assets/css/bootstrap-modal.css'}}}
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+        <script type="text/javascript">
+        $('#switchStore').on('click', function(ev) {
+            $('#exampleModalCenter').modal('toggle');
+        }); 
         </script>
 
         {{{footer.scripts}}}
